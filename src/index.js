@@ -10,7 +10,12 @@ root.render(
     {/* <App /> */}
     <StarRating maxRating={10} />
     <StarRating maxRating={15} />
-    <StarRating />
+    <StarRating
+      maxRating={5}
+      messages={["a", "b", "c", "d", "e"]}
+      defaultRating={3}
+      onSetRating={2}
+    />
   </React.StrictMode>
 );
 
