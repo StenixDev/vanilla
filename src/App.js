@@ -51,15 +51,22 @@ const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
 const KEY = 'f1b0cb0b';
+const query = 'dragon ball z';
 
 export default function App() {
   const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useState(tempWatchedData);
 
   useEffect(() => {
-    fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=dragon ball z`)
-      .then((res) => res.json())
-      .then((data) => setMovies(data.Search));
+    async function fetchMovies() {
+      const res = await fetch(
+        `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
+      );
+      const data = await res.json();
+      setMovies(data.Search);
+    }
+
+    fetchMovies();
   }, []);
 
   return (
