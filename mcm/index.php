@@ -80,10 +80,14 @@
           best employees you can to do quality work and to represent your
           business.
         </p></div>
-          <div>
+          <div >
             <h2>The Commercial Cleaning Manual</h2>
             <div class="mcm-book">
-              <img src="/img/mcm-book.jpg" alt="The Commercial Cleaning Manual" />
+              <div class="book-wrapper">
+                <img src="/img/mcm-book.jpg" alt="The Commercial Cleaning Manual" />
+              <a href="a-business-for-veterans-to-own" class="learn-more"
+            >Buy on Amazon</a>
+              </div>
             </div>
           </div>
         </div>

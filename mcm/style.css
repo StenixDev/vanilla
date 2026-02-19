@@ -420,6 +420,18 @@ a.meet:hover {
   align-items: center;
 }
 
+.mcm-book img {
+  width: 45%;
+}
+
+.book-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 .call-write {
   background-color: var(--color-primary);
   color: #fff;
