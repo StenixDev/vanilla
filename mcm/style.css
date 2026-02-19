@@ -1,0 +1,470 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  font-size: 2rem;
+  background-color: var(--color-primary);
+  padding: 0.4rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li + li {
+  margin-left: 2rem; /* same as your gap */
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  /* background-color and color already set on base; repeat only if needed */
+  display: block; /* ensure transform/size behaves predictably */
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease;
+  transform-origin: center center;
+  will-change: transform, background-color; /* optional performance hint */
+  text-decoration: none;
+}
+
+/* hover + active — these will animate because transition exists on base */
+nav ul li a:hover,
+nav ul li a:active {
+  background-color: #2d297a;
+  transform: scale(1.1);
+}
+
+/* BANNER */
+
+.site-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+section.banner {
+  height: 90vh;
+  width: 100%;
+  background-image: url(img/mancleaning.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+img.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.banner_text {
+  color: #fff;
+  padding: 2rem 5rem;
+  background-color: rgba(36, 33, 100, 0.6);
+  text-align: center;
+}
+
+.banner_text h2 {
+  font-size: 3.8rem;
+  margin: 0;
+}
+
+.banner_text h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* Wrapper Container */
+
+.wrapper {
+  max-width: 1200px;
+
+  margin: 3rem auto;
+}
+
+.wrapper h2 {
+  text-align: center;
+  font-size: 3.2rem;
+  color: var(--color-primary);
+}
+
+.box {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 2rem 4rem;
+}
+
+/* SERVICES */
+
+.services {
+  max-width: 120rem;
+  margin: 0 auto;
+  --gap: 20px; /* adjust spacing here */
+  padding: 20px 0;
+}
+
+.services .row {
+  display: flex;
+  justify-content: center; /* center the whole row inside the 1200px container */
+  gap: var(--gap);
+  margin-bottom: 24px;
+  width: 100%; /* important so calc(100%) inside service refers to 1200px */
+}
+
+.services .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center image and text inside the card */
+  gap: 12px;
+  background: var(--color-primary);
+  padding: 16px;
+  border-radius: 12px;
+  min-height: 200px; /* keeps cards visually equal height */
+  text-align: center;
+  color: #fff;
+  flex: 1;
+}
+
+.services .service h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0;
+}
+
+.read-more {
+  font-weight: bold;
+
+  display: inline-block;
+  background-color: #fff;
+  color: var(--color-primary);
+  padding: 0.3rem 1rem;
+  margin: 1rem;
+}
+
+.learn-more-wrapper {
+  text-align: center;
+}
+
+a.learn-more {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+/* Owning a Business */
+.owning-a-biz {
+  background-color: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.owning-a-biz .wrapper {
+  display: flex;
+}
+
+.owning-a-biz h2 {
+  color: #fff;
+  text-align: left;
+}
+
+.owning-a-biz p {
+  color: #fff;
+}
+
+.biz-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+a.biz-call {
+  display: inline-block;
+  width: 28rem;
+  text-align: center;
+
+  color: var(--color-primary);
+  background-color: #fff;
+
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Personal One-on-One Training */
+
+.personal-training {
+  display: flex;
+  flex-direction: column;
+}
+
+.trainor {
+  display: flex;
+}
+
+.personal-training img {
+  margin: 0 3rem 0 0;
+  width: 40%;
+}
+
+a.meet {
+  display: inline-block;
+  font-weight: bold;
+
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+a.meet:hover {
+  color: #fff;
+}
+
+.awards {
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  background-image: url(https://usmilitaryclean.com/wp-content/uploads/2023/06/awardbg6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 4rem 3rem;
+  color: #fff;
+}
+.awards h2 {
+  text-align: left;
+  color: #fff;
+}
+
+/* Testimonies */
+
+.testimonies {
+  display: flex;
+  gap: 1rem;
+}
+
+.testimony {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  align-items: start;
+}
+
+.author {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.author img {
+  width: 7rem;
+  border-radius: 100%;
+}
+
+/* Contact */
+
+.contact {
+  background-color: var(--color-primary);
+  padding: 2rem 0;
+  color: #fff;
+}
+
+.contact h2 {
+  color: #fff;
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  gap: 2rem;
+}
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-right a {
+  display: block;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.contact-right span {
+  color: #fff;
+}
+
+.career-decision {
+  display: flex;
+  gap: 2rem;
+}
+
+.decision-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.decision-left h2 {
+  align-self: self-start;
+}
+
+.decision-left span {
+  display: block;
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socials svg {
+  width: 7.2rem;
+  display: inline-block;
+}
+
+/* Single Page */
+
+.content {
+  margin-top: 6rem;
+  padding: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h1 {
+  text-align: center;
+  line-height: 1;
+}
+
+.content img {
+  margin-bottom: 2rem;
+}
+
+.right-image {
+  margin: 0 auto 20px auto;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.the-service {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.the-service img {
+  flex-shrink: 0; /* keep image size */
+  width: 150px; /* or whatever size you want */
+  height: auto;
+  align-self: center;
+}
+
+.the-service p {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0; /* CRITICAL: allows text to wrap */
+  overflow-wrap: anywhere;
+}
+
+.author-mb {
+  width: 120px;
+
+  margin-top: 3rem;
+
+  border-radius: 100%;
+}
+
+.mcm-book {
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-write {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--color-primary);
+  color: #fff;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+/* UTILS */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin-top: 6rem;
+}
+
+.two-col {
+  display: flex;
+}
+
+.two-col div {
+  flex: 1;
+}
+
+/* Animation */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
