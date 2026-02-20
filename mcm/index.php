@@ -16,13 +16,14 @@
       <div class="banner_text fade-in" >
         <h2>A Business for Veterans and Their Supporters to Own</h2>
         <h3>For civilians who support Veteran Employment</h3>
-        
-      </div>
-      <div class="learn-more-wrapper fade-in" style="border: 2px solid white;">
-          <a href="veterans-transition-into-entrepreneurship" class="learn-more"
+        <div class="learn-more-wrapper fade-in">
+          <a href="veterans-transition-into-entrepreneurship"  style="border: 2px solid white; margin-top: 1rem;" class="learn-more"
             >Learn More</a
           >
         </div>
+        
+      </div>
+      
     </section>
 
     <!-- END BANNER -->
@@ -58,8 +59,10 @@
         </p>
 
         <div class="two-col">
-          <div>
+          <div >
             <h2>On-the-Job Training (OJT) Program</h2>
+
+            <div class="ojt">
 
         <p class="box">
           Under this program, the VA can pay a portion of the veteran's salary
@@ -79,13 +82,15 @@
           families is a wonderful thing to do, ultimately you want to hire the
           best employees you can to do quality work and to represent your
           business.
-        </p></div>
+        </p>
+</div>
+      </div>
           <div >
             <h2>The Commercial Cleaning Manual</h2>
             <div class="mcm-book">
               <div class="book-wrapper">
                 <img src="/img/mcm-book.jpg" alt="The Commercial Cleaning Manual" />
-              <a href="a-business-for-veterans-to-own" class="learn-more"
+              <a href="https://www.amazon.com/Commercial-Cleaning-Manual-Complete-Businesses-ebook/dp/B0G1KTCJ47" target="_blank" class="learn-more"
             >Buy on Amazon</a>
               </div>
             </div>

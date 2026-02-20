@@ -413,15 +413,18 @@ a.meet:hover {
   border-radius: 100%;
 }
 
-.mcm-book {
+.ojt {
   display: flex;
-  background-color: red;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.mcm-book img {
-  width: 45%;
+.mcm-book {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .book-wrapper {
@@ -459,12 +462,33 @@ footer {
 
 .two-col {
   display: flex;
+  gap: 24px;
+  align-items: stretch; /* makes both columns equal height */
 }
 
-.two-col div {
+/* each column */
+.two-col > div {
+  flex: 1; /* equal width */
+  display: flex;
+  flex-direction: column; /* allows inner content to stretch */
+}
+
+/* optional: make inner content fill full height */
+.mcm-book,
+.book-wrapper {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
+/* responsive image */
+.book-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* keeps proportions */
+  display: block;
+}
 /* Animation */
 
 .fade-in {
