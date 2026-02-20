@@ -464,6 +464,7 @@ footer {
   display: flex;
   gap: 24px;
   align-items: stretch; /* makes both columns equal height */
+  flex-direction: column;
 }
 
 /* each column */

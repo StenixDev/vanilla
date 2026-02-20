@@ -1,3 +1,8 @@
+<?php
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,8 +36,8 @@
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="/base.css" />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/queries.css" />
+    <link rel="stylesheet" href="/style.css?v=2" />
+    <link rel="stylesheet" href="/queries.css?v=2" />
   </head>
   <body>
     <!-- HEADER -->
